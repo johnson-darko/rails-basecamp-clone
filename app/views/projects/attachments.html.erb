@@ -29,8 +29,9 @@
                         <tr>
                         <th scope="row"><%= count += 1 %></th>
                         <td><%= attachment.title %></td>
+                    
                         <td>
-                            <%= attachment.files.count %>
+                            <%= cl_image_tag attachment.files.key.count, height: 300, width: 400, crop: :fill %>
                         </td>
                     </tr>
             <%# pagy_nav(@pagy).html_safe %>
