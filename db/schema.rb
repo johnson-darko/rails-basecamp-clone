@@ -53,10 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_133734) do
     t.string "project_user_id"
     t.bigint "project_id", null: false
     t.bigint "user_id", null: false
-    t.boolean "read_access"
-    t.boolean "write_access"
-    t.boolean "update_access"
-    t.boolean "delete_access"
+    t.boolean "read_access", default: true
+    t.boolean "write_access", default: true
+    t.boolean "update_access", default: true
+    t.boolean "delete_access", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_project_users_on_project_id"
