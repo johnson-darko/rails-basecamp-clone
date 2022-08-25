@@ -8,6 +8,11 @@ Bundler.require(*Rails.groups)
 
 module RailsBasecampClone
   class Application < Rails::Application
+    config.generators do |generate|
+      generate.assets false
+      generate.helper false
+      generate.test_framework :test_unit, fixture: false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
@@ -18,5 +23,7 @@ module RailsBasecampClone
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.autoload_paths << "#{config.root}/lib"
+config.eager_load_paths << "#{config.root}/lib"
   end
 end

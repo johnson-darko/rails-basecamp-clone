@@ -288,7 +288,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   pagy
-  pg (~> 1.1)
+  pg
   pg_search
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
