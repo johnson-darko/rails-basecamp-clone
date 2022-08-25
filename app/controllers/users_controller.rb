@@ -86,7 +86,7 @@ class UsersController < ApplicationController
     end
 
     def projects
-        @pagy, @projects = pagy(@user.projects, items: 5)
+        @pagy, @projects = pagy(@user.projects)
         @bgs = ["#68428a","#a64791","#855635","#4c7e8a","#323e7a","#943469","#4d2227","#b05638","#4d0b47","#992b59","#1b5780","#046e6e","#254a22","#6d8748","#5d6344"]
         # render plain: @projects.inspect
     end

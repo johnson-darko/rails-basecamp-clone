@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_24_205250) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_25_133734) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments", force: :cascade do |t|
+    t.string "title"
+    t.string "userid"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_attachments_on_project_id"
+  end
 
   create_table "messages", force: :cascade do |t|
     t.string "message_id"
@@ -85,6 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_205250) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "attachments", "projects"
   add_foreign_key "messages", "project_threads"
   add_foreign_key "messages", "projects"
   add_foreign_key "messages", "users"

@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  #devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-
-  resources :messages
+ resources :messages
   resources :project_threads
   resources :attachments
   resources :users do
@@ -25,10 +18,10 @@ Rails.application.routes.draw do
     get 'projects/edit/:projectid' => 'users#edit_project', :on => :collection
     post 'projects/edit/:projectid' => 'projects#update', :on => :collection
     get 'projects/delete/:projectid' => 'projects#destroy', :on => :collection 
-    # get 'projects/:projectid/attachments/delete/:id' => 'projects#delete_attachment', :on => :collection
-    # get 'projects/attachments/:projectid' => 'projects#attachments', :on => :collection
-    # get 'projects/attachments/create/:projectid' => 'projects#upload_attachments', :on => :collection
-    # post 'projects/attachments/create/:projectid' => 'attachments#create', :on => :collection
+    get 'projects/:projectid/attachments/delete/:id' => 'projects#delete_attachment', :on => :collection
+    get 'projects/attachments/:projectid' => 'projects#attachments', :on => :collection
+    get 'projects/attachments/create/:projectid' => 'projects#upload_attachments', :on => :collection
+    post 'projects/attachments/create/:projectid' => 'attachments#create', :on => :collection
     # post 'projects/create' => 'projects#create', :on => :collection
 
     # Users Routes
@@ -81,4 +74,5 @@ Rails.application.routes.draw do
       end
     end
   end
+  # For details on the DSL a
 end
