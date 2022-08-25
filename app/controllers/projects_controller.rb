@@ -137,6 +137,7 @@ class ProjectsController < ApplicationController
 
     def get_project
         @project = Project.find_by(projectid: params[:projectid])
+        
     end
 
     def threads

@@ -45,14 +45,16 @@
         
         <div class="col-md-9 no-bg">
 
-<%= form_with url: projects_users_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a project"
-  %>
+<div class="search-bar-container mt-3">
+  <%= form_with url: projects_users_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a project"
+    %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+</div>
 
             
             <h3>Your Projects</h3>
