@@ -73,7 +73,7 @@
                     </div>
                     <div class="first-letter" style="background-color:<%= @bgs.sample %>"><%= project.title[0] %></div>
                     <p class="text-center project-text"><%= project.title %></p>
-                    <p class="text-center project-text"><%= project.description %></p>
+                    <p class="text-center project-text"><%#= project.description %></p>
                     <div class="text-center">
                         <%= link_to users_path + "/projects/#{project.projectid}/tasks", :class => 'btn btn-sm btn-secondary all-center', :style => 'background-color: #5d6344;border: 1px solid #5d6344;', "data-toggle" => "tooltip", "data-placement" => "top", "title" => "Tasks Link" do %>
                             <i class="fa fa-tasks"></i>
