@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_205250) do
 
   create_table "project_threads", force: :cascade do |t|
     t.string "thread_id"
+    t.string "project_thread_id"
     t.bigint "project_id", null: false
     t.bigint "user_id", null: false
     t.string "topic"

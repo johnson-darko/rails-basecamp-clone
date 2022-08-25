@@ -6,9 +6,9 @@
     <% end %>
     <%= form_for :user, url: users_path, html: {class: 'login-form'} do |f| %>
         <%= f.email_field :email, class: 'form-control', placeholder: 'Enter Your Email Address' %>
-        <% if @user != nil and @user.errors.any? and @user.errors.to_h[:email].to_s != "" %>
-            <div class="alert alert-danger"><%= "Email " + @user.errors.to_h[:email].to_s %></div>
-        <% end %>
+        <%# if @user != nil and @user.errors.any? and @user.errors.to_h[:email].to_s != "" %>
+            <div class="alert alert-danger"><%#= "Email " + @user.errors.to_h[:email].to_s %></div>
+        <%# end %>
         <%= f.text_field :fullname, class: 'form-control', placeholder: 'Enter Your Full Name' %>
         <% if @user != nil and @user.errors.any? and @user.errors.to_h[:fullname].to_s != "" %>
             <div class="alert alert-danger"><%= "Full Name " + @user.errors.to_h[:fullname].to_s %></div>

@@ -8,6 +8,7 @@ class CreateProjectUsers < ActiveRecord::Migration[7.0]
       t.boolean :write_access
       t.boolean :update_access
       t.boolean :delete_access
+
       t.timestamps
     end
   end
