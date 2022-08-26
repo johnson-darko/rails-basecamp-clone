@@ -14,21 +14,34 @@
   </head>
 
   <body>
-<nav>
-      <div class="left">
-        <%= link_to "Ebuddy", home_path %>
+<!-- <nav class= "navbar navbar-expand-md navbar-dark">
+      <div class="left ">
+        <#%= link_to "Ebuddy", home_path %>
       </div>
-      <div class="right">
-        <% if logged_in? %>
-          <%= link_to "Dashboard", dashboard_users_path %>
-          <%= link_to "Logout", logout_users_path %>
-        <% else %>
-          <%= link_to "SignIn", login_users_path %>
+      <div class="right ">
+        <%# if logged_in? %>
+          <%#= link_to "Dashboard", dashboard_users_path %>
+          <%#= link_to "Logout", logout_users_path %>
+        <%# else %>
+          <#%= link_to "SignIn", login_users_path %>
+          <%#= link_to "SignUp", new_user_path %>
+        <%# end %>
+      </div>
+    </nav> -->
+<div class="nav p-2 bg-light-dark text-white bg-dark flex">
+  <div class="nav-item m-1">
+    <% if logged_in? %>
+         | <%= link_to "Profile", profile_users_path %> | 
+          <%#= link_to "Logout", logout_users_path %> 
+    <% else %>
+  </div> 
+  <div class="nav-item m-1">
+    <%= link_to "SignIn", login_users_path %> 
           <%= link_to "SignUp", new_user_path %>
         <% end %>
-      </div>
-    </nav>
-
+  </div>
+ 
+</div>
 
     <%= yield %>
 <%= javascript_tag src="https://code.jquery.com/jquery-3.4.1.min.js" %>

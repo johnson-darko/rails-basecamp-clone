@@ -16,7 +16,7 @@ body.no-grey-bg, html.no-grey-bg{
   font-family: 'Ubuntu', sans-serif;
 }
 
-nav{
+/*nav{
   height: 80px;
   width: 100%;
   background: #2c3e50;
@@ -24,7 +24,7 @@ nav{
   box-sizing: border-box;
   display: flex;
 }
-
+*/
 nav .left{
   width: auto;
   height: 50px;
